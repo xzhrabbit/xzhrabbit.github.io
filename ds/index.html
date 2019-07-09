@@ -5,6 +5,28 @@
     
     <link rel="stylesheet" type="text/css" href="/css/main.css">
   
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
   </head>
 
 
@@ -20,49 +42,143 @@
 
   		<div class="ds">
 			<h2>Data Science Projects</h2>
-		<h3>• Battle of Midsize University Towns in US</h3> <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/Battle%20of%20the%20University%20Towns%20in%20US.ipynb"><b>Link</b></a>
+		<h3>• Battle of Midsize University Towns in US <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/Battle%20of%20the%20University%20Towns%20in%20US.ipynb"><b>Code Link</b></a> </h3>
 			<p> <b>Keywords</b>: <i>Unsupervised Learning</i>, <i>Web Scraping</i>, <i>Data Wrangling</i>, <i>Clustering</i></p>
-			<p> <img src="/ds/UTown2.JPG" alt="utown" class="center" width="300" height="177"> </p>
+			<p> <img src="/ds/UTown2.JPG" alt="utown" style="width:50%;"> </p>
 			<p> 
-			A university town or college town is a community that is dominated by its university population. 
+				A <b>university town</b> or <b>college town</b> is a community that is dominated by its university population. 
 			University towns are usually considered to be some of the best places to live in because of their low cost of living, 
 			rich cultural activities, educational opportunities, fun and sports, etc.
 			In this project, data on the midsize university towns in US are collected and analyzed to study their similarities and dissimilarities.  
 			</p>
 			<p>
-			The data we collected include a list of midsize university towns (291) and colleges/universities in each town. To "battle" them, the demographic data of each town, 
+				The data we collected include a list of midsize university towns (291) and colleges/universities in each town. To "battle" them, the demographic data of each town, 
 			important characteristics of each university, and top venues around each town have been organized into a structured database.
-			They are either scraped from various website (such as Wikipedia) or obtained by using API calls (such as College ScoreCard and FourSquare).
+			They are either scraped from various website (such as Wikipedia) or obtained by using API calls (such as <a href="https://collegescorecard.ed.gov/data/documentation/">College Scorecard</a> and <a href="https://foursquare.com/">FourSquare</a>).
 			</p>
 			<p>
-			Through unsupervised clustering (k-means clustering), the near 300 towns are grouped into 4 clusters.
+				Through unsupervised clustering (<b>k-means clustering</b>), nearly 300 towns are grouped into 4 clusters.
 			The result shows clear dependency on the geometrical location of the town, indicating that the life style of each town is heavily influenced by the regional culture,
 			although people in the universities usually comes from all over the US/world. Comparisons on the venue distributions and universities could be helpful to investors with 
-			the intension to open restaurants or bookstores in one of the university towns, or students who are going to apply to colleges in the near future
+			the intension to open business (e.g. restaurants or bookstores) in one of the university towns, or students who are going to apply to colleges in the near future.
 			</p>
 			<p> Jupyter notebook for this project can be found <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/Battle%20of%20the%20University%20Towns%20in%20US.ipynb"><b>here</b></a>. </p>
 		
-		<h3>• Fruit Classification</h3> <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/fruit-classification.ipynb"><b>Link</b></a>
+		<h3>• Fruit Classification <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/fruit-classification.ipynb"><b>Code Link</b></a> </h3>
 			<p> <b>Keywords</b>: <i>Supervised Learning</i>, <i>Image Classification</i>, <i>CNN</i>, <i>Transfer Learning</i>, <i>Tree-based Methods</i></p>
 			<p> <img src="/ds/fruits.JPG" alt="fruit" class="center" width="300" height="250"></p>
 			<p> 
-			In this project, ... 
+			In this project, we apply machine learning techniques to perform fruit classification given the image of different fruits as input.
 			</p>
+			<p> High quality images of 111 types of fruits and vegetables are provided in the <a href="https://www.kaggle.com/moltean/fruits">Kaggle Dataset</a>. Using them, we explored both the binary-class classification
+			and multi-class classification tasks using various ML methods.
+			As a summary of the results, the following table lists the accuracy we achieved for multi-class (all 111 types) classification using different methods. </p>
+<table>
+  <tr>
+    <th>Method</th>
+    <th>Accuracy (%)</th>
+  </tr>
+  <tr>
+    <td>Random Forests</td>
+    <td>95.44</td>
+  </tr>
+  <tr>
+    <td>Extremely Rondomized Trees</td>
+    <td>96.58</td>
+  </tr>
+  <tr>
+    <td>ConvNet (~380k params)</td>
+    <td>99.19</td>
+  </tr>
+  <tr>
+    <td>VGG19 (transfer learning, ~80k trainable params)</td>
+    <td>93.00</td>
+  </tr>
+</table>
+			<p> For more details and other interesting observations, please refer to the <b>Code Link</b> above or the Jupyter notebook link below. </p>	
 			<p> Jupyter notebook for this project can be found <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/fruit-classification.ipynb"><b>here</b></a>. </p>
 		
-		<h3>• Sentiment Analysis: Amazon Reviews</h3> <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/Sentiment_Analysis_Amazon_Reviews.ipynb"><b>Link</b></a>
+		<h3>• Sentiment Analysis: Amazon Reviews <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/Sentiment_Analysis_Amazon_Reviews.ipynb"><b>Code Link</b></a> </h3>
 			<p> <b>Keywords</b>: <i>Supervised Learning</i>, <i>Classification</i>, <i>NLP</i>, <i>Sentiment Analysis</i>, <i>CNN</i>, <i>RNN</i></p>
 			<p> <img src="/ds/sentiment.JPG" alt="sa" class="center" width="300" height="165"></p>
 			<p> 
-			In this project, ... 
+			In this project, machine learning (ML) methods are used to perform a common natural language processing (NLP) task, <b>sentiment analysis</b>.
+			There are many types and flavors of sentiment analysis and here we focus on polarity (<span style="color:red">positve</span> or <span style="color:blue">negative</span>) of texts. 
 			</p>
+			<p> Data came from <a href="https://www.kaggle.com/bittlingmayer/amazonreviews">Kaggle Dataset</a>, and it contains a few million Amazon customer reviews.
+			The modeling invloves tranditional ML methods (such as Naive Bayes and Logistic Regression) and neural networks (such as 1D CNN and RNN).
+			Simulations were done using Kaggle Kernels GPU machine (2CPU, 1GPU and 13 GB of RAM).
+			</p>
+			<p> From this project, we learnt that, </p>
+			• Traditional methods, such as Naive Bayes or logistic regression, perform decently on this task with accuracy between 80 and 90%. 
+			The advantage of those methods is the speed, in particular the naive bayes method needs less than 10 seconds to run.
+			Also, the results from them are easy to interpret. We are able to find out which words play important roles in separating positve and negative reviews.
+			• Neural networks perform much better than traditional methods. In this particular task, CNN is shown to outperform RNN. 
+			<p> In the following table, results using token counts as features are listed for different method. </p>
+<table>
+  <tr>
+    <th>Method</th>
+    <th>Accuracy (%)</th>
+  </tr>
+  <tr>
+    <td>Naive Bayes</td>
+    <td>84.49</td>
+  </tr>
+  <tr>
+    <td>Logistic Regression</td>
+    <td>89.40</td>
+  </tr>
+  <tr>
+    <td>1D CNN</td>
+    <td>94.49</td>
+  </tr>
+  <tr>
+    <td>RNN-LSTM</td>
+    <td>93.97</td>
+  </tr>
+</table>
 			<p> Jupyter notebook for this project can be found <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/Sentiment_Analysis_Amazon_Reviews.ipynb"><b>here</b></a>. </p>
 		
-		<h3>• NYC Taxi Fare Prediction</h3> <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/NYC-taxi-fare-prediction-Summary.ipynb"><b>Link</b></a>
-			<p> <b>Keywords</b>: <i>Supervised Learning</i>, <i>Regression</i>, <i>LightGBM</i>, <i>Neural Network</i></p>
+		<h3>• NYC Taxi Fare Prediction <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/NYC-taxi-fare-prediction-Summary.ipynb"><b>Code Link</b></a> </h3>
+			<p> <b>Keywords</b>: <i>Supervised Learning</i>, <i>Regression</i>, <i>EDA</i>, <i>LightGBM</i>, <i>Neural Network</i></p>
 			<p> <img src="/ds/taxi.JPG" alt="taxi" class="center" width="300" height="216"></p>
-			<p> 
-			In this project, ... 
+			<p> Here we apply machine learning techniques to predict the fare amount for a taxi ride in New York City given the pickup/dropoff locations and pickup time.</p>
+			<p>
+			The data comes from a <a href="https://www.kaggle.com/c/new-york-city-taxi-fare-prediction/overview">Kaggle playground competition</a> hosted by Google Cloud.
+			The training dataset contains about 55M rows, with features including pickup time, pickup and dropoff locations, passenger_count. Evaluation metric for this study is root mean squared error (RMSE).
+			</p>
+			<p> The modeling was carried out using 4 CPUs and 16 GB RAM, as a result, half of the data are used. Through exploratory data analysis (EDA), new features are designed and
+			applied in our model. Both LightGBM and neural networks were test in this task. The performance of each method is summarized in the following table.
+			</p>
+<table>
+  <tr>
+    <th>Method</th>
+    <th>Training rounds (epochs)</th>
+    <th>RMSE</th>
+  </tr>
+  <tr>
+    <td>LightGBM</td>
+    <td> 23500</td>
+    <td> 2.88</td>
+  </tr>
+  <tr>
+    <td>NN (86k params)</td>
+    <td>72</td>
+    <td>3.42</td>
+  </tr>
+  <tr>
+    <td>NN (147k params)</td>
+    <td>47</td>
+    <td>3.50</td>
+  </tr>
+</table>
+			<p>
+			From this study,
+			• Feature enigeering is important. The new features created based on the pickup/dropoff locations show great importance in our regression model, the Haversine distance and Bearing distance in particular. 
+			Distance to airports and landmarks are also shown to be useful.
+			• One big obstacle in this study to obtain very accurate results is the lack of information, which can be important in the prediction of fare amount, such as how much time the trip took (only pickup time is given),
+			if this trip is canceled or refunded, if this trip is a round trip, etc.
+			• In this task, neural network models do not perform better than the gradient boosting methods. The improvement could come from designing better architectures. 
 			</p>
 			<p> Jupyter notebook for this project can be found <a href="https://nbviewer.jupyter.org/github/xzhrabbit/xzhrabbit.github.io/blob/master/ds/NYC-taxi-fare-prediction-Summary.ipynb"><b>here</b></a>. </p>
 		
